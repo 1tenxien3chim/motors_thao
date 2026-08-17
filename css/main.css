@@ -22229,6 +22229,24 @@ button.scroll-top {
 }
 #Recently-added .recently_card {
   margin-bottom: 40px;
+  position: relative;
+}
+#Recently-added .recently_card span.icon-card_img {
+  position: absolute;
+  left: 15px;
+  bottom: 5px;
+  z-index: 100;
+  font-size: 20px;
+  color: var(--color-white);
+  background: #000;
+  opacity: 0;
+  display: inline-flex;
+  padding: 3px 5px;
+  transition: all 0.35s;
+}
+#Recently-added .recently_card:hover span.icon-card_img {
+  opacity: 0.5;
+  bottom: 10px;
 }
 #Recently-added .car-card {
   margin-bottom: 20px;
