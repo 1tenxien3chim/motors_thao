@@ -12,8 +12,9 @@
 #content-blog{
     padding: 150px 0px 40px;
     ul{
-        display: flex;
-        margin-bottom:50px;
+        display: flex; 
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
         li{
             list-style:none;
             padding: 0px 10px;
@@ -110,9 +111,7 @@
                 margin-right: 3px;
             }
         }
-    }
-
-
+    } 
     // SIDEBAR
     .sidebar {
 
@@ -347,6 +346,108 @@
 
         .sidebar {
             margin-top: 10px;
+        }
+    }
+}
+//  compare
+
+.compare {
+    padding: 28px 0 40px;
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 292px repeat(3, 1fr);
+        column-gap: 20px;
+    }
+
+    &-title {
+        padding-top: 28px;
+
+        h2 {
+            margin: 0;
+            color: #111d25;
+            font-size: 36px;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        span {
+            display: block;
+            width: 54px;
+            height: 5px;
+            margin-top: 26px;
+            background: #1648f5;
+            transform: skew(-30deg);
+        }
+    }
+
+    &-car {
+        text-align: center; 
+        .compare-image {
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            height: 140px;
+            background: #c1c9cf;
+            opacity: 0.5;
+
+            span {
+                font-size: 45px;
+                opacity: .35;
+                filter: grayscale(1);
+            }
+        }
+
+        > a {
+            display: block;
+            margin-top: 36px; 
+            color: #888;
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        &:hover{
+            opacity:1;
+            > a {
+                color: var(--color-primary);
+            }
+        }
+    }
+
+    &-labels,
+    &-values {
+        margin-top: 52px;
+
+        > div {
+            height: 40px;
+            padding: 11px 0;
+
+            border-bottom: 1px solid #d1d6da;
+
+            color: #68737b;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+    &-values {
+        margin-top: 52px;
+    }
+}
+
+@media (max-width: 767px) {
+    .compare {
+        overflow-x: auto;
+
+        &-grid {
+            min-width: 900px;
+            grid-template-columns: 180px repeat(3, 1fr);
+        }
+
+        &-title {
+            h2 {
+                font-size: 27px;
+            }
         }
     }
 }
