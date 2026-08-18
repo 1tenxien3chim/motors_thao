@@ -23231,8 +23231,9 @@ button.scroll-top {
 .compare-grid {
   display: grid;
   grid-template-columns: 292px repeat(3, 1fr);
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-bottom: 50px;
 }
 .compare-title {
   padding-top: 28px;
@@ -23260,13 +23261,13 @@ button.scroll-top {
   align-items: center;
   justify-content: center;
   height: 140px;
-  background: #c1c9cf;
+  background: #adb7c0;
   opacity: 0.5;
 }
 .compare-car .compare-image span {
-  font-size: 45px;
-  opacity: 0.35;
+  font-size: 70px;
   filter: grayscale(1);
+  color: #d1d7dc;
 }
 .compare-car > a {
   display: block;
@@ -23279,11 +23280,19 @@ button.scroll-top {
 .compare-car:hover {
   opacity: 1;
 }
+.compare-car:hover .compare-image {
+  opacity: 1;
+}
 .compare-car:hover > a {
   color: var(--color-primary);
 }
 .compare-labels, .compare-values {
   margin-top: 52px;
+}
+@media (max-width: 767px) {
+  .compare-labels, .compare-values {
+    display: none;
+  }
 }
 .compare-labels > div, .compare-values > div {
   height: 40px;
@@ -23292,6 +23301,12 @@ button.scroll-top {
   color: #68737b;
   font-size: 12px;
   line-height: 18px;
+}
+.compare-labels {
+  font-weight: 400;
+}
+.compare-labels a {
+  display: block;
 }
 .compare-values {
   margin-top: 52px;
@@ -23302,8 +23317,8 @@ button.scroll-top {
     overflow-x: auto;
   }
   .compare-grid {
-    min-width: 900px;
-    grid-template-columns: 180px repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
   }
   .compare-title h2 {
     font-size: 27px;
