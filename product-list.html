@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motors Thảo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header pages_blog">
+        <div class="menu_mb visible-xs visible-sm">
+            <button class="nav-toggle">
+                <span></span>
+            </button>
+            <a href="" class="logo_mb">
+                <img class="img_logo_mb" src="img/logo-mt.png" alt="" />
+            </a>   
+        </div>
+        <!-- /menu_mb --> 
+        <div class="menu_header"> 
+            <div class="header-center">
+                <div class="container-fluid"> 
+                    <div class="row">
+                        <div class="col-lg-4 col-md-2 hidden-sm hidden-xs">
+                            <a href="" class="logo_pc">
+                                <img src="img/logo-mt.png " alt="" />
+                            </a>
+                        </div>
+                        <div class="col-lg-8 col-md-10 hindden-sm col-xs-9">
+                            <div class="menu_main">
+                                <nav class="nav is-fixed">
+                                    <div class="nav-container">
+                                        <ul class="nav-menu menu clearfix"> 
+                                            <li class="menu-item is-active">
+                                                <a href="#" class="menu-link">Home</a> 
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="about.html" class="menu-link">Inventory</a>
+                                            </li>
+                                            <li class="menu-item has-dropdown">
+                                                <a href="product-list.html" class="menu-link">Pages</a>
+                                                <ul class="nav-dropdown menu">
+                                                    <li class="menu-item">
+                                                        <a href="product-detail.html" class="menu-link">IBCs</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#" class="menu-link">sản phẩm 2</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#" class="menu-link">sản phẩm 3</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="#" class="menu-link">sản phẩm 4</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item">
+                                                <a href="partner.html" class="menu-link">Blog</a> 
+                                            </li>
+                                            <li class="menu-item has-dropdown">
+                                                <a href="list-news.html" class="menu-link">Shop</a>
+                                                <ul class="nav-dropdown menu">
+                                                    <li class="menu-item">
+                                                        <a href="detail-news.html" class="menu-link">Tin tức 1</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="menu-item ">
+                                                <a href="contact-us.html" class="menu-link">Contact</a>
+                                            </li> 
+                                            <li class="menu-item phone-header hidden-sm hidden-xs">
+                                                <p>Call-centre:</p>
+                                                <b>(878) 967-4455</b>
+                                            </li>
+                                            <li class="menu-item speed-header hidden-sm hidden-xs">
+                                                <a href=""><i class="icon-md-speedometer-2"></i></a>
+                                                <span class="number-icon">0</span>
+                                            </li>
+                                            <li class="menu-item cart-header hidden-sm hidden-xs"> 
+                                                <a href=""><i class="icon-shopping-17"></i></a>
+                                                <span class="number-icon">0</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!-- menu main -->
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--slide-->
+    </header>
+    <!-- end header -->  
+    <section class="product-list">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 hidden-sm hidden-xs">
+                    <aside class="search-options">
+                        <div class="search-options__header">
+                            <i class="icon-search"></i> 
+                            <span>Search Options</span>
+                        </div> 
+                        <div class="search-options__body">
+
+                            <!-- Condition -->
+                            <div class="field field--select">
+                                <select>
+                                    <option selected disabled>Condition</option>
+                                    <option>New</option>
+                                    <option>Used</option>
+                                </select>
+                            </div>
+
+                            <!-- Make -->
+                            <div class="field">
+                                <input type="text" placeholder="Make">
+                            </div>
+
+                            <!-- Model -->
+                            <div class="field field--select">
+                                <select>
+                                    <option selected disabled>Model</option>
+                                    <option>Model 1</option>
+                                    <option>Model 2</option>
+                                </select>
+                            </div>
+
+                            <!-- Max Power -->
+                            <div class="field field--select">
+                                <select>
+                                    <option selected disabled>Max Power</option>
+                                    <option>100 HP</option>
+                                    <option>200 HP</option>
+                                    <option>300 HP</option>
+                                </select>
+                            </div>  
+                            <!-- PRICE -->
+                            <div class="range-field range-field--price">
+                                <div class="range-field__heading">
+                                    <span>Price</span>
+                                    <span id="priceValue">$0 – $200 000</span>
+                                </div>
+                                <div class="range">
+                                    <div class="range__track"></div>
+                                    <div class="range__active" id="priceActive"></div>
+                                    <input id="priceMin" class="range__input" type="range" min="0" max="200000" step="1000" value="0">
+                                    <input id="priceMax" class="range__input" type="range" min="0" max="200000" step="1000" value="200000">
+                                </div>
+                            </div>
+                            <!-- 0-60 MPH -->
+                            <div class="range-field range-field--speed">
+                                <div class="range-field__heading">
+                                    <span>0–60 mph</span>
+                                    <span id="speedValue">0s – 20s</span>
+                                </div>
+                                <div class="range">
+                                    <div class="range__track"></div>
+                                    <div class="range__active" id="speedActive"></div>
+                                    <input id="speedMin" class="range__input" type="range" min="0" max="20" step="1" value="0">
+                                    <input id="speedMax" class="range__input" type="range" min="0" max="20" step="1" value="20">
+                                </div>
+                            </div>
+                            <!-- end PRICE -->
+                            <!-- Max Mileage -->
+                            <div class="field field--select">
+                                <select>
+                                    <option selected disabled>Max Mileage</option>
+                                    <option>10,000 miles</option>
+                                    <option>50,000 miles</option>
+                                    <option>100,000 miles</option>
+                                </select>
+                            </div>
+
+                            <!-- Year -->
+                            <div class="field field--select">
+                                <select>
+                                    <option selected disabled>Year</option>
+                                    <option>2026</option>
+                                    <option>2025</option>
+                                    <option>2024</option>
+                                </select>
+                            </div>
+
+                            <!-- Transmission -->
+                            <div class="field field--select">
+                                <select>
+                                    <option selected disabled>Transmission</option>
+                                    <option>Automatic</option>
+                                    <option>Manual</option>
+                                </select>
+                            </div>
+
+                            <!-- Exterior Color -->
+                            <div class="field field--select">
+                                <select>
+                                    <option selected disabled>Exterior Color</option>
+                                    <option>Black</option>
+                                    <option>White</option>
+                                    <option>Red</option>
+                                </select>
+                            </div>
+
+                            <!-- Listing status -->
+                            <div class="field field--select">
+                                <select>
+                                    <option selected disabled>Listing status</option>
+                                    <option>Active</option>
+                                    <option>Sold</option>
+                                </select>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="field field--location">
+                                <span class="location-icon">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"
+                                            fill="currentColor"/>
+                                    <circle cx="12" cy="9" r="2.5" fill="#fff"/>
+                                    </svg>
+                                </span>
+                                <input type="text" placeholder="Any location">
+                            </div>
+
+                            <!-- Additional features -->
+                            <div class="field field--additional">
+                                <input type="text" placeholder="Additional features">
+                            </div>
+
+                            <!-- Search -->
+                            <div class="search-keywords">
+                                <label for="keywords">Search by keywords</label>
+
+                                <div class="field">
+                                    <input
+                                    id="keywords"
+                                    type="text"
+                                    placeholder="Search..."
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- Reset -->
+                            <button type="button" class="reset-button">
+                            RESET ALL
+                            </button> 
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-md-9 col-sm-12">
+                    <div class="box-product">
+                        <h3 class="title-product">Cars for sale</h3>
+                    </div>
+                    <div class="stm-car-listing-sort-units clearfix">
+                        <div class="stm-sort-by-options clearfix">
+                            <span>Sort by:</span>
+                            <div class="stm-select-sorting">
+                                <select class="select2-hidden-accessible" aria-hidden="true">
+                                    <option value="date_high" selected="" >Date: newest first</option>
+                                    <option value="date_low">Date: oldest first</option>
+                                    <option value="price_high">Price: highest first</option>
+                                    <option value="price_low">Price: lowest first</option>
+                                    <option value="mileage_high">Mileage: highest first</option>
+                                    <option value="mileage_low">Mileage: lowest first</option> 
+                                </select>  
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="row" id="Recently-added">
+                        <div class="col-md-4 col-sm-4 col-xs-12"> 
+                            <div class="car-card"> 
+                                <!-- IMAGE -->
+                                <div class="car-card__media"> 
+                                    <img class="car-card__image" src="img/car-06.jpg" alt="Nissan Leaf 292" style="opacity: 1;"> 
+                                    <!-- INFO --> 
+                                    <span class="icon-card_img"><i class="icon-speed-12"></i></span> 
+                                </div> 
+                                <!-- 5 IMAGE BARS -->
+                                <div class="car-card__bars"> 
+                                    <span class="car-card__bar active" data-image="img/car-06.jpg"><span class="icon_bar"></span></span> 
+                                    <span class="car-card__bar" data-image="img/car-07.jpg"><span class="icon_bar"></span></span> 
+                                    <span class="car-card__bar" data-image="img/car-08.jpg"><span class="icon_bar"></span></span> 
+                                    <span class="car-card__bar" data-image="img/car-09.jpg"><span class="icon_bar"></span></span> 
+                                    <span class="car-card__bar" data-image="img/car-10.jpg"><span class="icon_bar"></span></span> 
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact footer -->  
+     <footer class="contact">
+        <div class="contact-bg"></div>
+
+        <div class="container">
+            <div class="contact-form">
+                <h2>NEED A SPECIAL DEAL?<br>CONTACT US</h2>
+
+                <form>
+                    <input type="text" placeholder="Your name">
+                    <input type="email" placeholder="Your email">
+                    <input type="text" placeholder="Subject">
+                    <textarea placeholder="Your message (optional)"></textarea>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps?q=New%20York%20NY&output=embed"
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <div class="contact-info">
+
+                <div class="contact-info__item">
+                    <i class="icon-location"></i>
+                    <div>
+                        <label>ADDRESS</label>
+                        <strong>1010 Avenue of the Moon<br>New York, NY 10018 US.</strong>
+                    </div>
+                </div>
+
+                <div class="contact-info__item">
+                    <i class="icon-telephone"></i>
+                    <div>
+                        <label>PHONE</label>
+                        <strong>+1 628 123 4000</strong>
+                    </div>
+                </div>
+
+                <div class="contact-info__item">
+                    <i class="icon-envelope"></i>
+                    <div>
+                        <label>EMAIL</label>
+                        <strong>brandon@loggo.com</strong>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </footer>
+    <!-- end contact footer -->  
+    <footer class="footer-2">
+        <div class="container">
+            <p>© 2021 Motors – Electric Vehicle Dealer WordPress Theme</p>
+            <p>Trademarks and brands are the property of their respective owners.</p>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</html>

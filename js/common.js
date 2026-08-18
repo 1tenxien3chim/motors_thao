@@ -145,6 +145,96 @@ $('.car-card__bar').on('mouseleave', function () {
 
 // end Featured
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+	function setupRange({
+		minInput,
+		maxInput,
+		active,
+		output,
+		format
+	}) {
+		const minEl = document.querySelector(minInput);
+		const maxEl = document.querySelector(maxInput);
+		const activeEl = document.querySelector(active);
+		const outputEl = document.querySelector(output);
+
+		function update() {
+			let min = Number(minEl.value);
+			let max = Number(maxEl.value);
+
+			// Không cho 2 giá trị chồng/ngược nhau
+			if (min > max) {
+				[min, max] = [max, min];
+
+				minEl.value = min;
+				maxEl.value = max;
+			}
+
+			const minValue = Number(minEl.min);
+			const maxValue = Number(minEl.max);
+
+			const minPercent =
+				((min - minValue) / (maxValue - minValue)) * 100;
+
+			const maxPercent =
+				((max - minValue) / (maxValue - minValue)) * 100;
+
+			// Thanh xanh nằm giữa 2 thumb
+			activeEl.style.left = `${minPercent}%`;
+			activeEl.style.right = `${100 - maxPercent}%`;
+
+			outputEl.textContent = format(min, max);
+		}
+
+		minEl.addEventListener("input", () => {
+			if (Number(minEl.value) > Number(maxEl.value)) {
+				minEl.value = maxEl.value;
+			}
+
+			update();
+		});
+
+		maxEl.addEventListener("input", () => {
+			if (Number(maxEl.value) < Number(minEl.value)) {
+				maxEl.value = minEl.value;
+			}
+
+			update();
+		});
+
+		update();
+	}
+
+
+	// PRICE
+	setupRange({
+		minInput: "#priceMin",
+		maxInput: "#priceMax",
+		active: "#priceActive",
+		output: "#priceValue",
+
+		format: (min, max) => {
+			return `$${min.toLocaleString()} – $${max.toLocaleString()}`;
+		}
+	});
+
+
+	// 0-60 MPH
+	setupRange({
+		minInput: "#speedMin",
+		maxInput: "#speedMax",
+		active: "#speedActive",
+		output: "#speedValue",
+
+		format: (min, max) => {
+			return `${min}s – ${max}s`;
+		}
+	}); 
+});
+
 // slider
 
 $(".slider").owlCarousel({
@@ -260,9 +350,7 @@ $(".slider-car-card").owlCarousel({
     loop: true,
     nav: true,
     navText: ['<i class="fa fa-angle-left arrow-slider"></i>', '<i class="fa fa-angle-right arrow-slider"></i>'],
-    margin:30,  
-    //animateOut: ['fadeOut'], // default: false
-    //animateIn: ['fadeIn'], // default: false
+    margin:30,   
     center: false,
 });
 
@@ -286,9 +374,7 @@ $(".slider-panner").owlCarousel({
     loop: true,
     nav: false,
     //navText: ['<i class="fa fa-angle-left arrow-slider"></i>', '<i class="fa fa-angle-right arrow-slider"></i>'],
-    margin:30,  
-    //animateOut: ['fadeOut'], // default: false
-    //animateIn: ['fadeIn'], // default: false
+    margin:30,   
     center: false,
 });
 
