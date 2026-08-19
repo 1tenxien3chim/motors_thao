@@ -116,33 +116,39 @@ $(window).scroll(function() {
 });
 
 //Featured
+$('.car-card').on('mouseleave', function () {
+    var $card = $(this);
+    var $firstBar = $card.find('.car-card__bar').first();
+    var $image = $card.find('.car-card__image');
+    var image = $firstBar.data('image');
 
-$('.car-card__bar').on('mouseenter', function () { 
-    var image = $(this).data('image');
-    var $card = $(this).closest('.car-card');
-    var $image = $card.find('.car-card__image'); 
-    $image.css('opacity', 0); 
-    setTimeout(function () { 
-        $image.attr('src', image); 
-        $image.css('opacity', 1); 
+    $card.find('.car-card__bar').removeClass('active');
+    $firstBar.addClass('active');
+
+    $image.css('opacity', 0);
+
+    setTimeout(function () {
+        $image.attr('src', image);
+        $image.css('opacity', 1);
     }, 150);
-
 });
 
+$('.car-card__bar').on('mouseenter', function () {
+    var $bar = $(this);
+    var $card = $bar.closest('.car-card');
+    var $image = $card.find('.car-card__image');
+    var image = $bar.data('image');
 
-$('.car-card__bar').on('mouseleave', function () { 
-    var $card = $(this).closest('.car-card'); 
-    var $active = $card.find('.car-card__bar.active'); 
-    var image = $active.data('image'); 
-    var $image = $card.find('.car-card__image'); 
-    $image.css('opacity', 0); 
-    setTimeout(function () { 
-        $image.attr('src', image); 
-        $image.css('opacity', 1); 
+    $card.find('.car-card__bar').removeClass('active');
+    $bar.addClass('active');
+
+    $image.css('opacity', 0);
+
+    setTimeout(function () {
+        $image.attr('src', image);
+        $image.css('opacity', 1);
     }, 150);
-
 });
-
 // end Featured
 
 

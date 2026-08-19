@@ -962,6 +962,19 @@
 #Featured{
     padding: 80px 0px;
     background-color: var(--color-bg);
+    .car-card{
+        &__bar{
+            .icon_bar{
+                border-top:2px solid #000;
+                border-right:2px solid #000;
+            }
+            &:last-child{
+                .icon_bar{
+                    border-right:none;
+                }  
+            }
+        }
+    }
 
 }
 .slider-car-card{
@@ -1238,44 +1251,54 @@
     // ==================================================
 
     &__bars {
-        display: flex;
-
-        width: 100%;
-        height: 5px;
-
-        background: #d1d6d7;
-
+        display: flex; 
+        width: 100%; 
+        position: absolute;
+        height: 100%;
+        bottom: 0px;
+        left: 0px;
         gap:0px;
     }
 
 
     &__bar {
-        position: relative;
-
-        display: block;
-
-        flex: 1;
-
-        height: 5px;
-
-        background: #d1d6d7;
-
-        cursor: pointer;
-        border-top: 2px solid #000;
-        border-right: 2px solid #000;
+        position: relative; 
+        display: block; 
+        flex: 1;  
+        cursor: pointer; 
         transition: background .15s ease;
+        .icon_bar{
+            position: absolute;
+            z-index: 100;
+            bottom: 0px;
+            left: 0px;
+            display:block;
+            width: 100%;
+            height:5px;  
+            background:#d2d2d2;
+            border-top: 1px solid var(--color-white);
+            border-right: 2px solid var(--color-white);
+        }
         &:last-child{
-             border-right:none;
+            .icon_bar{
+                border-right:none;
+            } 
         }
 
         // ACTIVE
         &.active {
-            background:var(--color-primary);
+            background: transparent;
+            .icon_bar{
+                background:var(--color-primary); 
+            }
         }
 
         // HOVER
         &:hover {
-            background:var(--color-primary);
+           background: transparent;
+           .icon_bar{
+                background:var(--color-primary);
+            }
         }
     }
 }
@@ -1386,14 +1409,7 @@
         &__media{
             max-height: 160px;
             height: 160px;
-        }
-        &__bars{
-            height: 3px;
-        }
-        &__bar{
-            height: 3px;
-            border-top: none;  
-        }
+        } 
     }
     // ======================================================
     // CAR SPEC CARD

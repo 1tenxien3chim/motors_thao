@@ -21977,6 +21977,13 @@ button.scroll-top {
   padding: 80px 0px;
   background-color: var(--color-bg);
 }
+#Featured .car-card__bar .icon_bar {
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+}
+#Featured .car-card__bar:last-child .icon_bar {
+  border-right: none;
+}
 
 .slider-car-card .owl-nav {
   top: -145px;
@@ -22156,28 +22163,44 @@ button.scroll-top {
 .car-card__bars {
   display: flex;
   width: 100%;
-  height: 5px;
-  background: #d1d6d7;
+  position: absolute;
+  height: 100%;
+  bottom: 0px;
+  left: 0px;
   gap: 0px;
 }
 .car-card__bar {
   position: relative;
   display: block;
   flex: 1;
-  height: 5px;
-  background: #d1d6d7;
   cursor: pointer;
-  border-top: 2px solid #000;
-  border-right: 2px solid #000;
   transition: background 0.15s ease;
 }
-.car-card__bar:last-child {
+.car-card__bar .icon_bar {
+  position: absolute;
+  z-index: 100;
+  bottom: 0px;
+  left: 0px;
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #d2d2d2;
+  border-top: 1px solid var(--color-white);
+  border-right: 2px solid var(--color-white);
+}
+.car-card__bar:last-child .icon_bar {
   border-right: none;
 }
 .car-card__bar.active {
+  background: transparent;
+}
+.car-card__bar.active .icon_bar {
   background: var(--color-primary);
 }
 .car-card__bar:hover {
+  background: transparent;
+}
+.car-card__bar:hover .icon_bar {
   background: var(--color-primary);
 }
 
@@ -22289,13 +22312,6 @@ button.scroll-top {
 #Recently-added .car-card__media {
   max-height: 160px;
   height: 160px;
-}
-#Recently-added .car-card__bars {
-  height: 3px;
-}
-#Recently-added .car-card__bar {
-  height: 3px;
-  border-top: none;
 }
 #Recently-added .car-spec-card {
   width: 100%;
@@ -23385,41 +23401,6 @@ button.scroll-top {
   border-bottom: 1.5px solid #555;
   transform: translateY(-65%) rotate(45deg);
   pointer-events: none;
-}
-.product-list #Recently-added {
-  padding: 0px;
-}
-.product-list #Recently-added .car-card {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.product-list #Recently-added .car-card__bars {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0px;
-  left: 0px;
-  background: none;
-}
-.product-list #Recently-added .car-card__bar {
-  height: 100%;
-  background: none;
-  border: none;
-  display: flex;
-  flex-direction: column-reverse;
-}
-.product-list #Recently-added .car-card__bar.active .icon_bar, .product-list #Recently-added .car-card__bar:hover .icon_bar {
-  background: var(--color-primary);
-}
-.product-list #Recently-added .car-card__bar .icon_bar {
-  height: 5px;
-  background: #ccc;
-  border-top: 1px solid var(--color-white);
-  border-right: 2px solid var(--color-white);
-}
-.product-list #Recently-added .car-card__bar:last-child .icon_bar {
-  border-right: none;
 }
 
 .search-options {
