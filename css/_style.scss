@@ -1309,6 +1309,74 @@
         }
     }
 }
+
+//  product home
+.recently_card{
+    margin-bottom: 40px;
+    position: relative;
+    span.icon-card_img{
+        position: absolute;
+        left:15px;
+        bottom:5px;
+        z-index: 100;
+        font-size: 20px;
+        color:var(--color-white);
+        background: #000;
+        opacity: 0;
+        display: inline-flex;
+        padding: 3px 5px;
+        transition:all 0.35s;
+    } 
+    &:hover{
+        span.icon-card_img{
+            opacity: 0.5;
+            bottom:10px;
+        }
+    }
+}
+.car-card{
+    margin-bottom: 20px;
+    &__info{
+        background: none; 
+        display: block;
+        padding:5px 20px 5px 13px;
+        height: auto;
+        bottom: 0px;
+        right: 0px;
+        left: inherit;
+        background-color: var(--color-primary);
+        &::before{
+            position: absolute;
+            content: "";
+            display: block;
+            top: 0;
+            left: -25px;
+            height: 100%;
+            width: 32px;
+            background-color:var(--color-primary);
+            transform: skew(-18deg, 0deg);
+            z-index: 5;
+        }
+    }
+    &__price{
+        display: block;
+        width: 100%;
+        span{
+            font-size: 13px;
+            line-height: normal;
+            text-decoration: line-through;
+            font-weight:400;
+        }
+        strong{
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+    &__media{
+        max-height: 160px;
+        height: 160px;
+    } 
+}
 #Recently-added{
     padding: 100px 0px 60px;
     .title-home{
@@ -1344,73 +1412,7 @@
             justify-content: center;
             margin-bottom: 40px;
         }
-    }
-    .recently_card{
-        margin-bottom: 40px;
-        position: relative;
-        span.icon-card_img{
-            position: absolute;
-            left:15px;
-            bottom:5px;
-            z-index: 100;
-            font-size: 20px;
-            color:var(--color-white);
-            background: #000;
-            opacity: 0;
-            display: inline-flex;
-            padding: 3px 5px;
-            transition:all 0.35s;
-        } 
-        &:hover{
-            span.icon-card_img{
-                opacity: 0.5;
-                bottom:10px;
-            }
-        }
-    }
-    .car-card{
-        margin-bottom: 20px;
-        &__info{
-            background: none; 
-            display: block;
-            padding:5px 20px 5px 13px;
-            height: auto;
-            bottom: 0px;
-            right: 0px;
-            left: inherit;
-            background-color: var(--color-primary);
-            &::before{
-                position: absolute;
-                content: "";
-                display: block;
-                top: 0;
-                left: -25px;
-                height: 100%;
-                width: 32px;
-                background-color:var(--color-primary);
-                transform: skew(-18deg, 0deg);
-                z-index: 5;
-            }
-        }
-        &__price{
-            display: block;
-            width: 100%;
-            span{
-                font-size: 13px;
-                line-height: normal;
-                text-decoration: line-through;
-                font-weight:400;
-            }
-            strong{
-                font-size: 16px;
-                font-weight: 600;
-            }
-        }
-        &__media{
-            max-height: 160px;
-            height: 160px;
-        } 
-    }
+    } 
     // ======================================================
     // CAR SPEC CARD
     // ======================================================

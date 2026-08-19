@@ -22208,6 +22208,72 @@ button.scroll-top {
   border: 1px solid var(--color-white);
 }
 
+.recently_card {
+  margin-bottom: 40px;
+  position: relative;
+}
+.recently_card span.icon-card_img {
+  position: absolute;
+  left: 15px;
+  bottom: 5px;
+  z-index: 100;
+  font-size: 20px;
+  color: var(--color-white);
+  background: #000;
+  opacity: 0;
+  display: inline-flex;
+  padding: 3px 5px;
+  transition: all 0.35s;
+}
+.recently_card:hover span.icon-card_img {
+  opacity: 0.5;
+  bottom: 10px;
+}
+
+.car-card {
+  margin-bottom: 20px;
+}
+.car-card__info {
+  background: none;
+  display: block;
+  padding: 5px 20px 5px 13px;
+  height: auto;
+  bottom: 0px;
+  right: 0px;
+  left: inherit;
+  background-color: var(--color-primary);
+}
+.car-card__info::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: -25px;
+  height: 100%;
+  width: 32px;
+  background-color: var(--color-primary);
+  transform: skew(-18deg, 0deg);
+  z-index: 5;
+}
+.car-card__price {
+  display: block;
+  width: 100%;
+}
+.car-card__price span {
+  font-size: 13px;
+  line-height: normal;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.car-card__price strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+.car-card__media {
+  max-height: 160px;
+  height: 160px;
+}
+
 #Recently-added {
   padding: 100px 0px 60px;
 }
@@ -22248,70 +22314,6 @@ button.scroll-top {
     justify-content: center;
     margin-bottom: 40px;
   }
-}
-#Recently-added .recently_card {
-  margin-bottom: 40px;
-  position: relative;
-}
-#Recently-added .recently_card span.icon-card_img {
-  position: absolute;
-  left: 15px;
-  bottom: 5px;
-  z-index: 100;
-  font-size: 20px;
-  color: var(--color-white);
-  background: #000;
-  opacity: 0;
-  display: inline-flex;
-  padding: 3px 5px;
-  transition: all 0.35s;
-}
-#Recently-added .recently_card:hover span.icon-card_img {
-  opacity: 0.5;
-  bottom: 10px;
-}
-#Recently-added .car-card {
-  margin-bottom: 20px;
-}
-#Recently-added .car-card__info {
-  background: none;
-  display: block;
-  padding: 5px 20px 5px 13px;
-  height: auto;
-  bottom: 0px;
-  right: 0px;
-  left: inherit;
-  background-color: var(--color-primary);
-}
-#Recently-added .car-card__info::before {
-  position: absolute;
-  content: "";
-  display: block;
-  top: 0;
-  left: -25px;
-  height: 100%;
-  width: 32px;
-  background-color: var(--color-primary);
-  transform: skew(-18deg, 0deg);
-  z-index: 5;
-}
-#Recently-added .car-card__price {
-  display: block;
-  width: 100%;
-}
-#Recently-added .car-card__price span {
-  font-size: 13px;
-  line-height: normal;
-  text-decoration: line-through;
-  font-weight: 400;
-}
-#Recently-added .car-card__price strong {
-  font-size: 16px;
-  font-weight: 600;
-}
-#Recently-added .car-card__media {
-  max-height: 160px;
-  height: 160px;
 }
 #Recently-added .car-spec-card {
   width: 100%;
@@ -23356,6 +23358,7 @@ button.scroll-top {
 .product-list .stm-car-listing-sort-units {
   margin-top: 10px;
   padding-bottom: 15px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
 }
 .product-list .stm-car-listing-sort-units .stm-sort-by-options {
@@ -23401,6 +23404,79 @@ button.scroll-top {
   border-bottom: 1.5px solid #555;
   transform: translateY(-65%) rotate(45deg);
   pointer-events: none;
+}
+.product-list .recently_card {
+  margin-bottom: 45px;
+}
+.product-list .car-card .car-card__media .icon-card_img {
+  right: 15px;
+  left: unset;
+}
+.product-list .car-card .icon-card_camera, .product-list .car-card .icon-card_film {
+  position: absolute;
+  top: 15px;
+  z-index: 100;
+  font-size: 15px;
+  color: var(--color-white);
+  background: rgba(0, 0, 0, 0.6);
+  display: inline-flex;
+  padding: 3px 5px;
+  transition: all 0.35s;
+}
+.product-list .car-card .icon-card_camera {
+  left: 15px;
+}
+.product-list .car-card .icon-card_film {
+  left: 47px;
+}
+.product-list .car-spec-card__specs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.product-list .car-spec-card__spec {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-right: 11px;
+  color: rgba(1, 1, 1, 0.5019607843);
+  padding-bottom: 10px;
+  transition: 0.1s;
+  font-weight: 500;
+}
+.product-list .car-spec-card__spec i {
+  font-size: 18px;
+  font-weight: 500;
+}
+.product-list .car-spec-card__spec span {
+  display: inline-flex;
+  margin-left: 2px;
+  font-size: 13px;
+  transition: 0.1s;
+}
+.product-list .stm-badge-directory {
+  position: absolute;
+  right: -65px;
+  padding: 0 55px;
+  top: 20px;
+  width: 200px;
+  height: 33px;
+  line-height: 33px;
+  transform: rotate(45deg);
+  background-color: #0d43f1;
+  color: #fff !important;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.product-list .red_directory {
+  background: #cc6119;
 }
 
 .search-options {
@@ -23649,4 +23725,50 @@ button.scroll-top {
 }
 .reset-button:active {
   transform: translateY(1px);
+}
+
+.title-prduct_list {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding-bottom: 15px;
+  margin-bottom: 17px;
+  border-bottom: 1px solid #ccc;
+}
+.title-prduct_list .car-spec-card__heading h3 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.title-prduct_list .car-spec-card__heading h3 a {
+  color: #010101;
+}
+.title-prduct_list .car-card__price {
+  position: relative;
+  padding: 3px 10px 3px 3px;
+  margin-left: 18px;
+  text-align: right;
+  float: right;
+  width: 70px;
+  min-height: 35px;
+  background: var(--color-primary);
+}
+.title-prduct_list .car-card__price span {
+  margin-bottom: 0px;
+  opacity: 0.6;
+}
+.title-prduct_list .car-card__price strong {
+  font-size: 14px;
+}
+.title-prduct_list .car-card__price::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: -10px;
+  height: 100%;
+  width: 32px;
+  transform: skew(-14deg, 0deg);
+  z-index: -1;
+  background: var(--color-primary);
 }/*# sourceMappingURL=main.css.map */
