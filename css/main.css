@@ -21984,6 +21984,22 @@ button.scroll-top {
 #Featured .car-card__bar:last-child .icon_bar {
   border-right: none;
 }
+#Featured .car-card__info {
+  background: rgba(0, 0, 0, 0.568627451);
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-evenly;
+  padding: 10px 15px;
+}
+#Featured .car-card__info:before {
+  display: none;
+}
+#Featured .car-card__info .car-card__price {
+  text-align: right;
+  padding-right: 15px;
+}
 
 .slider-car-card .owl-nav {
   top: -145px;

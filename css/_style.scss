@@ -974,6 +974,22 @@
                 }  
             }
         }
+        &__info{
+            background: #00000091;
+            position: absolute;
+            display:flex;
+            width: 100%;
+            height: auto;
+            justify-content: space-evenly;
+            padding: 10px 15px;
+            &:before{
+                display: none;
+            }
+            .car-card__price{
+                text-align: right;
+                padding-right: 15px;
+            }
+        }
     }
 
 }
