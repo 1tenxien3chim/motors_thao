@@ -23005,6 +23005,7 @@ button.scroll-top {
   display: flex;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
+  margin-bottom: 60px;
 }
 #content-blog ul li {
   list-style: none;
@@ -23798,5 +23799,244 @@ button.scroll-top {
   width: 32px;
   transform: skew(-14deg, 0deg);
   z-index: -1;
+  background: var(--color-primary);
+}
+
+.detail {
+  padding: 130px 0px 30px;
+}
+.detail .box-sv {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 22px 20px 7px 20px;
+  border-radius: 5px;
+  background-color: #eaedf0;
+}
+.detail .box-sv .icon-sv {
+  font-size: 22px;
+  color: var(--color-primary);
+  margin: 6px 15px 10px 18px;
+}
+.detail .box-sv .text-sv h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 18px;
+  color: #0f0f0f;
+  font-weight: 600;
+}
+.detail .box-sv .text-sv p {
+  opacity: 0.6;
+  font-size: 13px;
+  font-weight: 400;
+  color: #102129;
+}
+.detail .title-detail {
+  font-size: 36px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: -0.4px;
+  line-height: 45px;
+  text-align: left;
+  color: #102129;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+.detail .sub-detail {
+  text-transform: uppercase;
+  color: #102129;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 30px;
+  text-align: left;
+}
+.detail .prices_detail {
+  background-color: #eaedf0;
+  border-radius: 5px;
+}
+.detail .prices_detail .box_prices_detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 25px;
+}
+.detail .prices_detail span {
+  display: block;
+}
+.detail .prices_detail span.price_label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #102129;
+  font-weight: 700;
+}
+.detail .prices_detail span.heading-font {
+  display: block;
+  color: #102129;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  margin-bottom: 0;
+}
+.detail .prices_detail .prices_text {
+  text-align: right;
+}
+.detail .prices_detail .prices_text a {
+  display: block;
+  color: #102129;
+  text-decoration: underline;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  opacity: 0.5;
+  text-align: right;
+  transition: all 0.5s ease;
+}
+.detail .prices_detail .prices_text a:first-child {
+  margin-bottom: 10px;
+}
+.detail .prices_detail .button-detail {
+  padding: 0px 25px 30px 25px;
+}
+.detail .prices_detail .button-detail a {
+  display: block;
+  background-color: var(--color-primary);
+  box-shadow: 0 2px 0 var(--color-primary);
+  line-height: normal;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: center;
+  box-shadow: none !important;
+  padding: 15px;
+  color: var(--color-white);
+  border-radius: 5px;
+}
+.detail .item_electric_detail {
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid #bbbec1;
+  margin-bottom: 0;
+  padding: 18px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.detail .item_electric_detail .mpg-unit {
+  width: 36%;
+  padding-top: 14px;
+  float: left;
+  text-align: center;
+  color: #102129;
+}
+.detail .item_electric_detail .mpg-unit .mpg-value {
+  padding: 0 3px;
+  font-size: 26px;
+  font-weight: 700;
+}
+.detail .item_electric_detail .mpg-unit .mpg-label {
+  color: #102129;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 24px;
+  text-align: center;
+  text-transform: initial;
+}
+.detail .item_electric_detail .mpg-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.detail .item_electric_detail .mpg-icon i {
+  font-size: 30px;
+}
+.detail .item_electric_detail .mpg-icon.mpg-2 {
+  background-color: #18d551;
+  box-shadow: 0px 0px 0px 8px rgba(24, 213, 81, 0.1);
+}
+.detail .electric_detail {
+  border: 1px solid #bbbec1;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 18px 10px 25px;
+}
+.detail .electric_detail h3 {
+  text-align: center;
+  color: #102129;
+  font-size: 18px;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  text-transform: capitalize;
+  margin: 10px 0 14px;
+  font-weight: 600;
+}
+.detail .electric_detail .charge-range {
+  opacity: 0.5;
+  color: #102129;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+.detail .electric_detail .item_electric_detail {
+  margin-top: 0px;
+  border: none;
+  padding: 0px;
+}
+.detail .content-detail .f-carousel {
+  max-height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.detail .content-detail .detail-buttons {
+  display: flex;
+  justify-content: center;
+}
+.detail .content-detail .detail-buttons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  margin-bottom: 5px;
+  padding: 27px 20px;
+  box-shadow: none;
+  background-color: #102129;
+  text-transform: capitalize;
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 5px;
+  transition: opacity 0.2s ease-in !important;
+  transform: translateZ(0);
+  opacity: 1;
+  color: var(--color-white);
+  min-width: 200px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
+.detail .content-detail .detail-buttons a i {
+  font-size: 26px;
+  margin-right: 7px;
+}
+.detail .content-detail .detail-buttons a:hover {
   background: var(--color-primary);
 }/*# sourceMappingURL=main.css.map */
