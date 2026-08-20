@@ -961,7 +961,7 @@
 }
 #Featured{
     padding: 80px 0px;
-    background-color: var(--color-bg);
+    background-color: var(--color-bg); 
     .car-card{
         &__bar{
             .icon_bar{
@@ -974,6 +974,15 @@
                 }  
             }
         }
+        &__media{
+           max-height: unset;
+           height: unset; 
+        }
+        &__button{
+            width: 186px;
+            border: 1px solid transparent;
+            transition: all 0.25s;
+        }
         &__info{
             background: #00000091;
             position: absolute;
@@ -982,12 +991,18 @@
             height: auto;
             justify-content: space-evenly;
             padding: 10px 15px;
+            z-index: 11;
             &:before{
                 display: none;
             }
             .car-card__price{
                 text-align: right;
                 padding-right: 15px;
+            }
+        }
+        &:hover{
+            .car-card__button{ 
+                border: 1px solid var(--color-white);
             }
         }
     }
@@ -1280,8 +1295,7 @@
     &__bar {
         position: relative; 
         display: block; 
-        flex: 1;  
-        cursor: pointer; 
+        flex: 1;   
         transition: background .15s ease;
         .icon_bar{
             position: absolute;

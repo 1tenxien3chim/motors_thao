@@ -21984,6 +21984,15 @@ button.scroll-top {
 #Featured .car-card__bar:last-child .icon_bar {
   border-right: none;
 }
+#Featured .car-card__media {
+  max-height: unset;
+  height: unset;
+}
+#Featured .car-card__button {
+  width: 186px;
+  border: 1px solid transparent;
+  transition: all 0.25s;
+}
 #Featured .car-card__info {
   background: rgba(0, 0, 0, 0.568627451);
   position: absolute;
@@ -21992,6 +22001,7 @@ button.scroll-top {
   height: auto;
   justify-content: space-evenly;
   padding: 10px 15px;
+  z-index: 11;
 }
 #Featured .car-card__info:before {
   display: none;
@@ -21999,6 +22009,9 @@ button.scroll-top {
 #Featured .car-card__info .car-card__price {
   text-align: right;
   padding-right: 15px;
+}
+#Featured .car-card:hover .car-card__button {
+  border: 1px solid var(--color-white);
 }
 
 .slider-car-card .owl-nav {
@@ -22189,7 +22202,6 @@ button.scroll-top {
   position: relative;
   display: block;
   flex: 1;
-  cursor: pointer;
   transition: background 0.15s ease;
 }
 .car-card__bar .icon_bar {
