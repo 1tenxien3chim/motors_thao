@@ -24003,6 +24003,11 @@ button.scroll-top {
   border: none;
   padding: 0px;
 }
+@media (max-width: 991px) {
+  .detail .content-detail {
+    margin-top: 30px;
+  }
+}
 .detail .content-detail .f-carousel {
   max-height: 450px;
   border-radius: 10px;
@@ -24039,4 +24044,135 @@ button.scroll-top {
 }
 .detail .content-detail .detail-buttons a:hover {
   background: var(--color-primary);
+}
+@media (max-width: 767px) {
+  .detail .content-detail .detail-buttons a {
+    min-width: 160px;
+  }
+}
+.detail .service-detail {
+  margin-top: 90px;
+  margin-bottom: 50px;
+  padding: 20px 0px;
+  background: var(--color-primary);
+}
+.detail .service-detail .item-sv {
+  min-height: 120px;
+  margin: 25px 0px;
+  padding: 20px 5px;
+  text-align: center;
+  background-color: #2558ff;
+  border-radius: 5px;
+  color: var(--color-white);
+}
+.detail .service-detail .item-sv i {
+  font-size: 40px;
+  font-weight: 500;
+}
+.detail .service-detail .item-sv .label-text {
+  font-size: 13px;
+  margin-bottom: -3px;
+}
+.detail .service-detail .item-sv .value-text {
+  font-weight: 700;
+  font-size: 15px;
+}
+.detail .parameter-detail {
+  margin-bottom: 70px;
+}
+.detail .parameter-detail .row-50 {
+  margin: 0px -50px;
+}
+.detail .parameter-detail .padd-50 {
+  padding: 0px 50px;
+}
+.detail .parameter-detail .title-parameter-detail {
+  font-size: 40px;
+  line-height: 44px;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+.detail .parameter-detail .item-parameter-detail {
+  margin-bottom: 40px;
+}
+.detail .parameter-detail .item-parameter-detail .line-parameter {
+  border-bottom: 1px solid #d5d9e0;
+  padding: 9px 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #888;
+}
+.detail .parameter-detail .item-parameter-detail .line-parameter .parameter-text {
+  font-size: 16px;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 40px;
+  font-weight: 400;
+}
+.detail .parameter-detail .item-parameter-detail .line-parameter .parameter-value {
+  font-weight: 600;
+  color: #232628;
+}
+.detail .parameter-detail .heading-font {
+  margin-bottom: 20px;
+}
+.detail .parameter-detail #myCarousel img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.detail .parameter-detail .f-carousel {
+  --f-carousel-gap: 8px;
+  --f-carousel-slide-width: calc((100% - 16px) / 3);
+}
+.detail .parameter-detail .f-carousel img {
+  max-height: 160px;
+}
+.detail .parameter-detail .is-arrow {
+  background: var(--color-white);
+  opacity: 0.8;
+  border-radius: 50%;
+  color: var(--color-primary);
+}
+.detail .parameter-detail .is-arrow:hover {
+  opacity: 1;
+  background: var(--color-white);
+}
+.detail .parameter-detail .is-arrow.is-prev {
+  left: 15px !important;
+}
+.detail .parameter-detail .is-arrow.is-next {
+  right: 15px !important;
+}
+.detail .parameter-detail .overview-detail strong {
+  margin-bottom: 15px;
+  font-size: 13px;
+  line-height: 22px;
+}
+.detail .parameter-detail .overview-detail p {
+  color: #232628;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.detail .parameter-detail .features-detail li {
+  list-style: none;
+  padding: 9px 0 8px 20px;
+  border-bottom: 1px solid #d5d9e0;
+  line-height: 40px;
+  font-weight: 400;
+  position: relative;
+}
+.detail .parameter-detail .features-detail li::after {
+  position: absolute;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: "\f05d";
+  left: 0px;
+  top: 21px;
+  color: var(--color-primary);
 }/*# sourceMappingURL=main.css.map */
