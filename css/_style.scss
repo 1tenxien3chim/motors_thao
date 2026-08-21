@@ -1463,7 +1463,7 @@
         // ==================================================
 
         &__heading { 
-            span {
+            a {
                 display: block; 
                 margin-bottom: 4px; 
                 color:var(--color-primary); 
@@ -1474,11 +1474,13 @@
             }
 
             h3 {
-                margin: 0; 
-                color: #20252a; 
-                font-size: 18px;
-                line-height: 1.2; 
-                font-weight: 700;
+                a{
+                     margin: 0; 
+                    color: #20252a; 
+                    font-size: 18px;
+                    line-height: 1.2; 
+                    font-weight: 700;
+                } 
             }
         }
 

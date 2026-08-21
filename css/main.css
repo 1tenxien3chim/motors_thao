@@ -22355,7 +22355,7 @@ button.scroll-top {
   cursor: pointer;
   background-color: rgba(239, 239, 239, 0.937254902);
 }
-#Recently-added .car-spec-card__heading span {
+#Recently-added .car-spec-card__heading a {
   display: block;
   margin-bottom: 4px;
   color: var(--color-primary);
@@ -22364,7 +22364,7 @@ button.scroll-top {
   font-weight: 700;
   text-transform: uppercase;
 }
-#Recently-added .car-spec-card__heading h3 {
+#Recently-added .car-spec-card__heading h3 a {
   margin: 0;
   color: #20252a;
   font-size: 18px;
