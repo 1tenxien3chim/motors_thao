@@ -24312,4 +24312,55 @@ button.scroll-top {
   border: 2px solid var(--color-primary);
   color: var(--color-primary);
   border-radius: 50%;
+}
+
+#myModal-buttons .close {
+  color: var(--color-white);
+  position: relative;
+  z-index: 100;
+}
+#myModal-buttons .modal-header {
+  background-color: #102129;
+}
+#myModal-buttons .modal-header .box-header_modal {
+  padding-left: 85px;
+  position: relative;
+}
+#myModal-buttons .modal-header .box-header_modal::after {
+  position: absolute;
+  font-family: "icomoon";
+  content: "\e907";
+  left: 5px;
+  top: 20px;
+  font-size: 55px;
+  color: var(--color-primary);
+}
+#myModal-buttons .modal-header .box-header_modal p {
+  color: #aaa;
+  font-size: 13px;
+}
+#myModal-buttons .modal-header .box-header_modal h3 {
+  color: var(--color-white);
+}
+#myModal-buttons .modal-body label {
+  font-size: 13px;
+  margin-bottom: 3px;
+  color: #888;
+  font-weight: 400;
+}
+#myModal-buttons .modal-body input {
+  height: 37px;
+  border-radius: 0px;
+  background: #f6f7f9;
+  border: none;
+  box-shadow: none;
+}
+#myModal-buttons .modal-body button {
+  font-size: 14px;
+  font-weight: 700;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+  padding: 17px 28px 15px;
+  line-height: 14px;
 }/*# sourceMappingURL=main.css.map */

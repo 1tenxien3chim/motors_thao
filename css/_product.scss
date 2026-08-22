@@ -1024,3 +1024,57 @@
         }
     }
 }
+#myModal-buttons{ 
+    .close{
+        color: var(--color-white);
+        position: relative;
+        z-index:100;
+    }
+    .modal-header{
+        background-color: #102129;
+        .box-header_modal{
+            padding-left:85px; 
+            position: relative;
+            &::after{
+                position: absolute;
+                font-family: 'icomoon';
+                content: "\e907";
+                left: 5px;
+                top: 20px;
+                font-size: 55px;
+                color: var(--color-primary);
+            }
+            p{
+                color: #aaa;
+                font-size: 13px;
+            }
+            h3{
+                color: var(--color-white);
+            } 
+        } 
+    }
+    .modal-body{
+        label{
+            font-size: 13px;
+            margin-bottom:3px;
+            color: #888;
+            font-weight: 400;
+        }
+        input{
+            height: 37px;
+            border-radius: 0px;
+            background:#f6f7f9;
+            border:none;
+            box-shadow: none;
+        }
+        button{
+            font-size: 14px;
+            font-weight: 700;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-color: var(--color-primary);
+            padding: 17px 28px 15px; 
+            line-height: 14px;
+        }
+    }
+}
